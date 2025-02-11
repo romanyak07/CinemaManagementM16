@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinemaMídia</title>
+    <link rel="icon" type="image/png" href="~/logo/logoCinema.jpg">
+    <link rel="stylesheet" href="~/css/BackOffice.css">
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="window.location.href='@Url.Action("NoneView", "Home")'" style="cursor: pointer;">
+            <img src="~/logo/logoCinema.jpg" alt="Logo do site" width="75">
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Menu Lateral -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" onclick="loadContent('dashboard')">Dashboard</a></li>
+                <li><a href="#">@Html.ActionLink("Adicionar Filme", "Create", "Movies")</a></li>
+                <li><a href="#">@Html.ActionLink("Inscrever Ator", "Create", "Actors")</a></li>
+                <li><a href="#">@Html.ActionLink("Inscrever Realizador", "Create", "Directors")</a></li>
+                <li><a href="#">@Html.ActionLink("Criar Sala", "Create", "Rooms")</a></li>
+                <li><a href="#">@Html.ActionLink("Criar Sessão", "Create", "Sessions")</a></li>
+            </ul>
+        </nav>
+
+        <!-- Área de Conteúdo Dinâmico -->
+        <main class="content" id="content-area">
+            <h1>Dashboard</h1>
+            <div class="dashboard">
+                <div class="card"><h2>Filmes em Cartaz</h2><p>12</p></div>
+                <div class="card"><h2>Sessões Ativas</h2><p>5</p></div>
+                <div class="card"><h2>Reservas Feitas</h2><p>145</p></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

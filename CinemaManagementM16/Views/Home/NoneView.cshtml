@@ -1,0 +1,103 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinemaMídia</title>
+    <link rel="icon" type="image/png" href="~/logo/logoCinema.jpg">
+    <link rel="stylesheet" href="~/css/NoneView.css">
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="window.location.href='@Url.Action("NoneView", "Home")'" style="cursor: pointer;">
+            <img src="~/logo/logoCinema.jpg" alt="Logo do site" width="75">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Filmes</a></li>
+                <li><a href="#">Ingressos</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="auth">
+            <a asp-action="Login">Login</a> / <a asp-controller="Clients" asp-action="Create">Registo</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner -->
+        <section class="banner">
+            <img src="~/Images/Shrek 1.jpg" alt="Filmes em Cartaz">
+        </section>
+
+        <!-- Filmes em Cartaz -->
+        <section class="movies">
+            <h2>🎬 Em Cartaz</h2>
+            <div class="movie-list">
+                <div class="movie-card">
+                    <img src="~/Images/Shrek 1.jpg" alt="Oppenheimer">
+                    <h3>Oppenheimer</h3>
+                    <p>🎭 Drama | 🔞 16+</p>
+                    <button class="btn">Ver Detalhes</button>
+                </div>
+
+                <div class="movie-card">
+                    <img src="~/images/Shrek 2.jpg" alt="Avatar 2">
+                    <h3>Avatar 2</h3>
+                    <p>🌊 Aventura | 🔞 12+</p>
+                    <button class="btn">Ver Detalhes</button>
+                </div>
+
+                <div class="movie-card">
+                    <img src="~/images/Shrek 3.jpg" alt="John Wick 4">
+                    <h3>John Wick 4</h3>
+                    <p>🔫 Ação | 🔞 18+</p>
+                    <button class="btn">Ver Detalhes</button>
+                </div>
+
+                <div class="movie-card">
+                    <img src="~/images/Shrek 1.jpg" alt="Barbie">
+                    <h3>Barbie</h3>
+                    <p>💖 Comédia | 🔞 Livre</p>
+                    <button class="btn">Ver Detalhes</button>
+                </div>
+
+                <div class="movie-card">
+                    <img src="~/Images/Shrek 1.jpg" alt="Super Mario Bros">
+                    <h3>Super Mario Bros</h3>
+                    <p>🎮 Aventura | 🔞 Livre</p>
+                    <button class="btn">Ver Detalhes</button>
+                </div>
+
+                <div class="movie-card">
+                    <img src="~/images/Shrek 2.jpg" alt="Duna 2">
+                    <h3>Duna 2</h3>
+                    <p>🏜 Sci-Fi | 🔞 14+</p>
+                    <button class="btn">Ver Detalhes</button>
+                </div>
+
+                <div class="movie-card">
+                    <img src="~/images/Shrek 3.jpg" alt="Pantera Negra 2">
+                    <h3>Pantera Negra 2</h3>
+                    <p>🦸 Ação | 🔞 12+</p>
+                    <button class="btn">Ver Detalhes</button>
+                </div>
+
+                <div class="movie-card">
+                    <img src="~/images/Shrek 1.jpg" alt="Homem-Aranha">
+                    <h3>Homem-Aranha</h3>
+                    <p>🕷 Aventura | 🔞 Livre</p>
+                    <button class="btn">Ver Detalhes</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

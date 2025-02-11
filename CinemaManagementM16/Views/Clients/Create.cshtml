@@ -1,0 +1,68 @@
+﻿@model CinemaManagementM16.Models.Client
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = null; 
+}
+
+
+<head>
+    <link rel="stylesheet" href ="~/css/Login.css" />
+    <title>CinemaMídia</title>
+    <link rel="icon" type="image/png" href="~/logo/logoCinema.jpg">
+    <link rel="stylesheet" href="~/css/NoneView.css">
+</head>
+
+<header>
+    <div class="logo" onclick="window.location.href='@Url.Action("NoneView", "Home")'" style="cursor: pointer;">
+        <img src="~/logo/logoCinema.jpg" alt="Logo do site" width="75">
+
+    </div>
+</header>
+
+<main>
+    <div class="login-container">
+        <h2>Registar</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="form-container">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            </div>
+                                    
+                <input type="submit" value="Registar" class="btn btn-primary" />
+    
+        </form>
+        <p class="register-link">Já tem conta? @Html.ActionLink("Autentique-se aqui.", "Login", "Home")</p>
+    </div>
+    </div>
+    </div>
+</div>
+</main>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

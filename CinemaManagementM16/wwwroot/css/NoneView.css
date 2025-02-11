@@ -1,0 +1,137 @@
+﻿/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: #111;
+    color: white;
+}
+
+/* Barra de Navegação */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+    }
+
+        nav ul li a:hover {
+            color: red;
+        }
+
+/* Login/Register */
+.auth a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .auth a:hover {
+        color: white;
+    }
+
+/* Banner */
+.banner {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Filmes em Destaque */
+.movies {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+/* Lista de filmes */
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 filmes por linha */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cartões de filmes */
+.movie-card {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 180px;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+    .movie-card:hover {
+        transform: scale(1.05);
+    }
+
+    .movie-card img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .movie-card h3 {
+        margin-top: 10px;
+        font-size: 18px;
+        color: red;
+    }
+
+    .movie-card p {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+
+
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: red;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+    .btn:hover {
+        background: darkred;
+    }

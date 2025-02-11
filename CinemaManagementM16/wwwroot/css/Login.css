@@ -1,0 +1,113 @@
+﻿/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Barra de Navegação */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 15px 30px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+    nav a:hover {
+        color: red;
+    }
+
+/* Container de Login */
+.login-container {
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    color: red;
+    margin-bottom: 15px;
+}
+
+/* Campos de Entrada */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+    .input-group label {
+        display: block;
+        font-size: 14px;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #333;
+        color: white;
+        outline: none;
+    }
+
+/* Botão */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .btn:hover {
+        background: darkred;
+    }
+
+/* Link de Registro */
+.register-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+    .register-link a {
+        color: red;
+        text-decoration: none;
+    }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
